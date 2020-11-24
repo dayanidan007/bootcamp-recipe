@@ -1,0 +1,37 @@
+body{
+    background-color: wheat;
+}
+
+#viewRecipes{
+    display: inline-block;
+    margin: 5px 5px;
+}
+.recipe{
+    float: left;
+    width: 400px;
+    height: 380px;
+    padding: 1px 1px ;
+    border-radius: 5px;
+    background-color: #ffda79;
+    margin: 5px 5px;
+    padding: 1px 1px ;
+}
+
+img{
+    position: relative;
+    justify-self: center;
+    width: 100px;
+    height: 100px;
+}
+
+#ingredients{
+    position: relative;
+}
+ul{
+    display: inline-block;
+}
+li{
+    margin: 10px 10px;
+    float: left;
+
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="top">
+        <input type="text"  id="recipeName">
+        <button>Search!</button>
+    </div>
+    <div id="viewRecipes"></div>
+    <script id="recipes-template" type="text/x-handlebars-template">
+        {{#each recipes}}
+        <div class="recipe">
+            <div id="title">
+            <a href="{{href}}">{{title}}</a>
+            </div>
+            <img src="{{thumbnail}}" rel="rexipe-pic" onclick="firstIngredients('{{ingredients}}')">
+            <div id="ingredients">
+                ingredients:
+                <ul>
+                {{#each ingredients}}                
+                 <li>{{this}}</li>
+                {{/each}}
+            </ul>
+                </div>
+        </div>
+         {{/each}}
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
