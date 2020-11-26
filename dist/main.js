@@ -4,8 +4,9 @@
 
 $('button').on('click', function () {
     let input = $('#recipeName').val()
-    let renderer = new Render(input)
-    renderer.render(input)
+    $.get(`/sanity/${input}`, function (recipes) {
+    let renderer = new Render()
+    renderer.render(recipes)
 })
 
 

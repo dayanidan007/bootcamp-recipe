@@ -6,10 +6,8 @@ class Render {
         this.data = data
     }
     render(data) {
-        $.get(`/sanity/${data}`, function (recipes) {
-            let someHTML = template({ recipes });
+            let someHTML = template({ data });
             $("#viewRecipes").append(someHTML);
-        })
     }
 }
 
